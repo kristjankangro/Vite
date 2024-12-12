@@ -1,7 +1,8 @@
-// import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import css1 from "./styles1.module.css"
+import css2 from "./styles2.module.css"
 
 const logoName = 'train';
 const module = await import(`./images/${logoName}.jpeg`);
@@ -23,7 +24,8 @@ function App() {
                     <img src={reactLogo} className="logo react" alt="React logo"/>
                 </a>
             </div>
-            <h1>Vite + React ...</h1>
+            <h1 className={css1.highlight} >Vite + React ...</h1>
+            <h1 className={css2.highlight}>Vite + React ...</h1>
             <a href="../second-route/">Second route</a>
         </>
     )

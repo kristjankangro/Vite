@@ -13,5 +13,11 @@ export default defineConfig({
                 second: resolve(__dirname, "second-route/index.html"),
             }
         }
+    }, css: {
+        modules: {
+            localsConvention: "camelCase",
+            generateScopedName: "[local]_[hash:base64:2]"
+        }
+
     }
 })
