@@ -1,0 +1,9 @@
+﻿.styled-list {
+    .item {
+        color: green;
+        
+        &.selected{
+            color: lightgreen;
+        }
+    }
+}

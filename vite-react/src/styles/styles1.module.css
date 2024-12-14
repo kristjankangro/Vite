@@ -1,0 +1,14 @@
+﻿.selector {
+    --fore-color: #FFEEDD;
+    
+    
+    color: var(--fore-color);
+}
+
+.highlight{
+    color: var(--fore-color-main);
+}
+
+.styles1.color {
+    color: mediumvioletred;
+}

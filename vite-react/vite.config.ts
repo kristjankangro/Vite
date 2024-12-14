@@ -1,6 +1,7 @@
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react';
 import {resolve} from "path";
+import cssNesting from "postcss-nesting";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -13,11 +14,14 @@ export default defineConfig({
                 second: resolve(__dirname, "second-route/index.html"),
             }
         }
-    }, css: {
+    },
+    css: {
+        postcss: {
+            plugins: [cssNesting()],
+        },
         modules: {
             localsConvention: "camelCase",
             generateScopedName: "[local]_[hash:base64:2]"
         }
-
     }
 })
