@@ -15,10 +15,7 @@ function App() {
 
     useEffect(
         () => {
-            const url = import.meta.env.DEV
-                ? "http://localhost:5173/posts.json"
-                : "https://dummyjson.com/posts?skip=10&limit=10";
-            fetch(url)
+            fetch(import.meta.env.VITE_JSON_API_URL)
                 .then(res => res.json())
                 .then(json => {
                     setPosts(json.posts);
